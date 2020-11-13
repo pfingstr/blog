@@ -6,7 +6,7 @@ export default function Layout({ title = 'Blog', children = [] }) {
     <div className="container">
       <Head>
         <title>{title}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
       </Head>
 
       <Navbar />
