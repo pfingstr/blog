@@ -3,7 +3,11 @@
   "slug": "test",
   "date": "2020-11-16T21:51:03.283Z",
   "coverImage": "/img/31300468583_856fe746be_k.jpg",
+<<<<<<< HEAD
   "body": "![](/img/31300468583_856fe746be_k.jpg)",
   "bodyHtml": "<p><img src=\"/img/31300468583_856fe746be_k.jpg\" alt=\"\"></p>\n",
   "dateFormatted": "Monday, November 16, 2020"
+=======
+  "body": "Break\n\n![](/img/31300468583_856fe746be_k.jpg)\n\nBreak"
+>>>>>>> b11584ca44a0c9b231c83414398e26a95df9d8c7
 }
