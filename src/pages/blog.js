@@ -5,7 +5,7 @@ import posts from '../../public/data/posts.json'
 export default function Blog({ posts = [] }) {
   return (
     <Layout title="Blog">
-      <h1 className="title">📓 Blog</h1>
+      <h1 className="title">Blog</h1>
       {posts.map(post => (
         <div key={post.slug} className="box">
           <article className="media">

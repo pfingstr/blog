@@ -15,6 +15,12 @@
 .navbar-item:hover {
   text-decoration: underline;
 }
+
+.navbar-search {
+  font-size: 1.4rem;
+  width: 250px;
+}
+
 .main-content {
   margin: 2rem 0;
   padding: 2rem 0 4rem;

@@ -16,7 +16,7 @@ export default function Layout({ title = 'Blog', children = [] }) {
       </main>
 
       <footer className="mb-6">
-        &copy; {(new Date()).getFullYear()}
+        &copy; Tamara Benedict {(new Date()).getFullYear()}
       </footer>
     </div>
   )
