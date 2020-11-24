@@ -7,7 +7,7 @@ const defaultCoverImage = '/img/34961490322_bb9611120a_k.jpg'
 export default function BlogPost({ post }) {
   return (
     <Layout title={`${post.title} | Blog`}>
-      <Link href="/blog"><a className="button mb-4">◀️ All Entries</a></Link>
+      <Link href="/blog"><a className="button mb-4">Back</a></Link>
 
       <div className="cover-image" style={{backgroundImage:`url(${post.coverImage || defaultCoverImage})`}}>
         <div className="title-block">
