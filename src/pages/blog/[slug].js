@@ -7,8 +7,7 @@ const defaultCoverImage = '/img/34961490322_bb9611120a_k.jpg'
 export default function BlogPost({ post }) {
   return (
     <Layout title={`${post.title} | Blog`}>
-      <Link href="/blog"><a className="button mb-4">Back</a></Link>
-
+      
       <div className="cover-image" style={{backgroundImage:`url(${post.coverImage || defaultCoverImage})`}}>
         <div className="title-block">
           <h1 className="title">{post.title}</h1>
@@ -29,7 +28,7 @@ export async function getStaticProps(context) {
   }
 }
 
-// generates all available blog post URLs
+// generates all available blog post URLs (lazy load for SSR)
 export async function getStaticPaths() {
   return {
     paths: posts.map(post => ({ params: { slug: post.slug } })),

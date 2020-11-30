@@ -3,24 +3,33 @@ import Layout from '../components/Layout'
 import posts from '../../public/data/posts.json'
 import Select from 'react-select';
 
-const stuff = posts.map(opt => ({ label: opt.title, value: opt.slug }));
-
-export default function Blog({ posts = [] }) {
-  return (
-    <Layout title="Blog">
-      <h1 className="title">Blog</h1>
-      
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+function PostSearch() {
+  const dropdownItems = posts.map(opt => ({ label: opt.title, value: opt.slug }));
+  return(
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <div className="blog-search" >
           <Select
               onChange={opt => window.location.href = "/blog/" + opt.value}
               placeholder={'Search Posts'}
               menuPlacement="auto"
               menuPosition="right"
-              options={stuff} />
+              options={dropdownItems} />
         </div>
         </div>
-        
+  )
+}
+
+export default function Blog({ posts = [] }) {
+  return (
+    <Layout title="Blog">
+      <section className="section">
+      <div className="container">
+      <div className="columns is-centered">
+      <PostSearch />
+      </div>
+      </div>
+      
+      </section>
       {posts.map(post => (
         <div key={post.slug} className="box">
           <article className="media">
