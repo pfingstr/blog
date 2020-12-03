@@ -7,6 +7,15 @@
 .tile {
   display: flex;
   align-items: center;
+  
+}
+
+@media(max-width: 768px) {
+  .tile {
+    display: block;
+    margin-left:1rem;
+    margin-right:1rem;
+  }
 }
 
 .navbar-logo {
@@ -66,6 +75,13 @@
   overflow: hidden;
   transition: transform .5s;
   cursor: pointer;
+}
+
+@media(max-width: 768px) {
+  .hero-image {
+    margin-left:1rem;
+    margin-right:1rem;
+  }
 }
 
 .hero-image:hover {

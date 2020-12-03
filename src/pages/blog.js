@@ -33,7 +33,8 @@ export default function Blog({ posts = [] }) {
   const hero = posts[0]
   return (
     <Layout title='Blog'>
-      <PostSearch />
+      <div className="tile"><PostSearch /></div>
+      
       <Link href='/blog/[slug]' as={`/blog/${hero.slug}`}>
       <div className='hero-image' style={{ backgroundImage:`url(${hero.coverImage})` }}>
       <a className='tile-block'>
