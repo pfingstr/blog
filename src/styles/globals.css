@@ -18,13 +18,6 @@
   }
 }
 
-.navbar-logo {
-  transition: transform .5s;
-}
-
-.navbar-logo:hover {
-  transform: rotate(0.12turn);
-}
 
 .navbar-item {
   font-size: 1.4rem;
