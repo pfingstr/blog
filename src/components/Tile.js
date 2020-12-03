@@ -1,12 +1,19 @@
-import React from 'react'
+import Link from 'next/link'
 
-const Tile = ({ className, content, title }) => (
-  <div className='tile is-parent'>
-    <div className={'tile is-child notification box '.concat(className)}>
-      <p className='title'>{title}</p>
-      <span className='content'>{content}</span>
-    </div>
-  </div>
+const Tile = ({ title, dateFormatted, slug, coverImage }) => (
+    <div>
+      <Link href='/blog/[slug]' as={`/blog/${slug}`}>
+    <div className='tile-image' style={{backgroundImage:`url(${coverImage})`}}>
+      
+        <a className='tile-block'>
+          <h2 className='title'>{title}</h2>
+          <em className='subtitle is-5 is-block'>{dateFormatted}</em>
+        </a>
+  
+ </div></Link>
+ </div>
 )
 
 export default Tile
+
+

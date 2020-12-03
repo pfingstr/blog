@@ -4,6 +4,10 @@ import posts from '../../../public/data/posts.json'
 
 const defaultCoverImage = '/img/34961490322_bb9611120a_k.jpg'
 
+// The prop name dangerouslySetInnerHTML is intentionally chosen to be frightening, 
+// and the prop value (an object instead of a string) can be used to indicate sanitized data. 
+// You need to make sure your HTML is structured properly and sanitized before inserting it into your page.
+
 export default function BlogPost({ post }) {
   return (
     <Layout title={`${post.title} | Blog`}>
@@ -14,7 +18,6 @@ export default function BlogPost({ post }) {
           <em className="subtitle is-6 is-block">{post.dateFormatted}</em>
         </div>
       </div>
-
       <div className="content section" dangerouslySetInnerHTML={{__html:post.bodyHtml}} />
     </Layout>
   )

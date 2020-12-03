@@ -3,7 +3,7 @@ const path = require('path')
 const remark = require('remark')
 const html = require('remark-html')
 
-// look for any `.json` files in the `input` folder, then output to a single json file
+// look for any .json files in the input folder then output to a single json file
 const scanDirectories = [
   { inputDirectory: 'public/data/posts', outputFile: 'public/data/posts.json' }
 ]
@@ -11,7 +11,7 @@ const scanDirectories = [
 console.log('BUILD JSON DATA')
 scanDirectories.forEach(processFiles)
 
-// finds all json files in directory, processes to markdown, updates original file, updates output file
+// finds all json files in directory, convert to md, update original file, update output file
 function processFiles({ inputDirectory, outputFile }) {
   const postsDirectory = path.join(process.cwd(), inputDirectory)
   const filenames = fs.readdirSync(postsDirectory)
