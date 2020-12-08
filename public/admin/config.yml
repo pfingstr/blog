@@ -19,11 +19,22 @@ collections:
       - {label: "Cover Image", name: "coverImage", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   
-  - label: "About"
-    name: "about"
-    file: "public/data/about/about.md"
-    fields:
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Bio", name: "bio", widget: "markdown"}
-      - {label: "Profile Image", name: "profileImage", widget: "image", required: true}
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "public/data/about/bio.md"
+        label: "About"
+        name: "about"
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Bio", name: "bio", widget: "markdown"}
+          - {label: "Profile Image", name: "profileImage", widget: "image", required: true}
+      
+        - file: "public/data/about/home.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Subtitle", name: "subtitle", widget: "string"}
+      
     
