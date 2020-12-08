@@ -22,19 +22,19 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "public/data/about/bio.md"
-        label: "About"
-        name: "about"
-        fields:
-          - {label: "Name", name: "name", widget: "string"}
-          - {label: "Bio", name: "bio", widget: "markdown"}
-          - {label: "Profile Image", name: "profileImage", widget: "image", required: true}
+    - file: "public/data/about/bio.md"
+      label: "About"
+      name: "about"
+      fields:
+        - {label: "Name", name: "name", widget: "string"}
+        - {label: "Bio", name: "bio", widget: "markdown"}
+        - {label: "Profile Image", name: "profileImage", widget: "image", required: true}
       
-        - file: "public/data/about/home.md"
-        label: "Home"
-        name: "home"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Subtitle", name: "subtitle", widget: "string"}
+    - file: "public/data/about/home.md"
+      label: "Home"
+      name: "home"
+      fields:
+        - {label: "Title", name: "title", widget: "string"}
+        - {label: "Subtitle", name: "subtitle", widget: "string"}
       
     
