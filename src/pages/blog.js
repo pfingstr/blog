@@ -5,14 +5,6 @@ import Select from 'react-select'
 import Tile from '../components/Tile'
 
 
-const getClassName = idx => {
-  switch (idx) {
-    case 0: return 'tile-image'
-    case 1: return 'tile-image'
-    default: return 'tile-image'
-  }
-}
-
 function PostSearch() {
   const dropdownItems = posts.map(opt => ({ label: opt.title, value: opt.slug }));
   return(  
@@ -44,7 +36,7 @@ export default function Blog({ posts = [] }) {
       </div>
       </Link>
       <div className='grid-two-column'>
-      {posts.slice(1).map((post, idx) => (
+      {posts.slice(1).map((post) => (
           <Tile key={post.slug} {...post} />
         ))}
         </div>

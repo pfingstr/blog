@@ -8,7 +8,7 @@ const scanDirectories = [
   { inputDirectory: 'public/data/posts', outputFile: 'public/data/posts.json' }
 ]
 
-console.log('BUILD JSON DATA')
+console.log('BUILD JSON POSTS')
 scanDirectories.forEach(processFiles)
 
 // finds all json files in directory, convert to md, update original file, update output file
@@ -50,3 +50,6 @@ function processFiles({ inputDirectory, outputFile }) {
     console.log([inputDirectory, outputFile].join(' -> '), posts.length)
   })
 }
+
+
+

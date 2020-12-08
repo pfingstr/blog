@@ -21,8 +21,9 @@ collections:
   
   - name: "pages"
     label: "Pages"
+    extension: "json"
     files:
-    - file: "public/data/about/bio.md"
+    - file: "public/data/about/bio.json"
       label: "About"
       name: "about"
       fields:
@@ -30,7 +31,7 @@ collections:
         - {label: "Bio", name: "bio", widget: "markdown"}
         - {label: "Profile Image", name: "profileImage", widget: "image", required: true}
       
-    - file: "public/data/about/home.md"
+    - file: "public/data/about/home.json"
       label: "Home"
       name: "home"
       fields:

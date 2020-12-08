@@ -1,3 +1,5 @@
+// import ReactMarkdown from 'react-markdown'
+// import matter from 'gray-matter'
 import Layout from '../components/Layout'
 
 export default function About() {
@@ -12,3 +14,15 @@ export default function About() {
     </Layout>
   )
 }
+
+/*export async function getStaticProps() {
+  const bio = await import(`../../public/data/about/bio.md`)
+  const data = matter(bio.default)
+  return {
+    props: {
+      name: data.name,
+      bio: data.bio,
+      profileImage: data.profileImage,
+    }
+  }
+}*/
