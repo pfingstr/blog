@@ -1,28 +1,24 @@
-// import ReactMarkdown from 'react-markdown'
-// import matter from 'gray-matter'
+import about from '../../public/data/about/bio.json'
 import Layout from '../components/Layout'
 
-export default function About() {
+export default function About({ about }) {
   return (
     <Layout title="About">
+      <h2 className="title has-text-centered">{about.name}</h2>
       <div className="grid-two-column">
-      <h1 className="title">Image</h1>
-      <p></p>
-      <h1 className="title">Under Construction</h1>
-      <p></p>
+      <div className='content section'>
+      <div dangerouslySetInnerHTML={{__html:about.bioHtml}} />
+      </div>
+      <div className='img' style={{backgroundImage:`url(${about.profileImage})`}}></div>
       </div>
     </Layout>
   )
 }
 
-/*export async function getStaticProps() {
-  const bio = await import(`../../public/data/about/bio.md`)
-  const data = matter(bio.default)
+export async function getStaticProps() {
   return {
     props: {
-      name: data.name,
-      bio: data.bio,
-      profileImage: data.profileImage,
+      about
     }
   }
-}*/
+}

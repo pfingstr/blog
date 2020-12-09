@@ -51,5 +51,24 @@ function processFiles({ inputDirectory, outputFile }) {
   })
 }
 
+/* const scanDirectories = [
+  { inputDirectory: 'public/data/about', outputFile: 'public/data/about.json' }
+]*/
+
+///////////////////////////////////////////////////////////////////////////////
+processFile('public/data/about', 'bio.json')
+
+function processFile(inputDirectory, fileName) {
+    const fileDir = path.join(process.cwd(), inputDirectory)
+    const filePath = path.join(fileDir, fileName)
+    const fileContents = fs.readFileSync(filePath, 'utf8')
+    const jsonData = JSON.parse(fileContents)
+    
+    remark().use(html).process(jsonData.bio, function(err, data) {
+      jsonData.bioHtml = data.toString()
+    })
+    fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2))
+}
+
 
 

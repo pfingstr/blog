@@ -1,12 +1,22 @@
 import Layout from '../components/Layout';
+import home from '../../public/data/about/home.json'
 
-export default function Home() {
+export default function Home({ home }) {
   return (
     <Layout>
-      <section className="section">
-        <h1 className="title has-text-centered">Welcome to my blog</h1>
-        <h2 className="subtitle has-text-centered">stay and read as long as you like</h2>
+      <section className="section-fill">
+        <h1 className="title has-text-centered">{home.title}</h1>
+        <h2 className="subtitle has-text-centered">{home.subtitle}</h2>
       </section>
+      
     </Layout>
   )
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      home
+    }
+  }
 }
